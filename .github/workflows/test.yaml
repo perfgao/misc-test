@@ -17,5 +17,5 @@ jobs:
         run: |
            pwd
            ls
-           $(./aembit credentials get --client_id $AEMBIT_CLIENT_ID --server_workload_host www.google.com --server_workload_port 443)
+           $(./aembit credentials get --client_id $AEMBIT_CLIENT_ID --id_token https://22f161.id.useast2.aembit.io --server_workload_host www.google.com --server_workload_port 443)
               echo OAuth Token $TOKEN
