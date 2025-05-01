@@ -1,0 +1,17 @@
+
+on:
+  push:
+    branches:
+      - main
+
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: demo
+        env:
+           AEMBIT_CLIENT_ID: ${{ secrets.AEMBIT_CLIENT_ID }}
+        run: |
+           $(./aembit credentials get --client_id $AEMBIT_CLIENT_ID --server_workload_host www.google.com --server_workload_port 443)
+              echo OAuth Token $TOKEN
