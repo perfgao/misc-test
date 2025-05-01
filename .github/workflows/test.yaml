@@ -22,3 +22,8 @@ jobs:
            ls
            $(./aembit credentials get --client_id $AEMBIT_CLIENT_ID --server_workload_host www.google.com --server_workload_port 443 -credential_names pwd-for-githubaction)
               echo Get OAuth Token: $TOKEN
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3.19
+        timeout-minutes: 60
+        with:
+          limit-access-to-actor: false
