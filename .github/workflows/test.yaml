@@ -21,4 +21,4 @@ jobs:
            pwd
            ls
            $(./aembit credentials get --client_id $AEMBIT_CLIENT_ID --server_workload_host www.google.com --server_workload_port 443)
-              echo 'Get OAuth Token: ${TOKEN}'
+              echo Get OAuth Token: $TOKEN
